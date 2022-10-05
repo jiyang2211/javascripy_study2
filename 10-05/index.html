@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="intro"> 안녕하세요 근국쌤입니다.</div>
+    <div id = "lunch">
+        <p>오늘 점심은?</p>
+        <span id="menu">도련님탕수육 고기고기</span>
+    </div>
+    <p>pppppppppppp</p>
+    <input type="text" id="search"/>
+    <button type="button" id="submitBtn">
+        확인
+    </button>
+</body>
+<script>
+    $(function(){
+        let div = $('div');
+        let intro = $('#intro');
+        intro.text("안녕하세요 문지영입니다");
+        intro.css('color', 'red');
+        let p = $('#lunch').find('p');
+        console.log(p);
+
+        $('#search').on('input',function(e){
+            console.log(e.target.value);
+        });
+
+        $('#submitBtn').on('click', function(e){
+            let value = $('#search').val();
+            alert(value);
+            // console.log('qwe')
+        });
+
+
+
+    });
+    
+</script>
+</html>
